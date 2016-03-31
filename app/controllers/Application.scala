@@ -57,7 +57,7 @@ object Application extends Controller {
 
   def options(path: String) = CorsAction {
     Action { request =>
-      Ok.withHeaders(ACCESS_CONTROL_ALLOW_HEADERS -> Seq(AUTHORIZATION, CONTENT_TYPE, "Target-URL", "client_id").mkString(","))
+      Ok.withHeaders(ACCESS_CONTROL_ALLOW_HEADERS -> Seq(AUTHORIZATION, CONTENT_TYPE, "Target-URL", "client_id", "client_secret", "grant_type", "username", "password").mkString(","))
     }
   }
 
